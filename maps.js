@@ -150,7 +150,7 @@ function createMap(lat,lng, path)
         zoom: 10
     });
 
-    var osmTile = "http://{s}.tile.cloudmade.com/<apikey>/101270/256/{z}/{x}/{y}.png";
+    var osmTile = "http://{s}.tile.cloudmade.com/ba8af3a046054cefaed65ea8ca002dc1/101270/256/{z}/{x}/{y}.png";
     var osmCopyright = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap contributors</a>';
                         '<a href="http://creativecommons.org/licenses/by-sa/2.0/"></a>CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>';
     
