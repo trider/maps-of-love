@@ -28,5 +28,4 @@ licenses.
 
 ###Contact Information
 You can contact me via the following links: [@jonnygold](https://twitter.com/jonnygold) on Twitter, 
-[Facebook] (http://www.facebook.com/jonathan.gold.946), and [Gmail](mailto:jonnygold@gmail.com). 
-I also created a Maps of Love Community on (Google+)[http://googleplus.mapsoflove.net"]
+[Facebook] (http://www.facebook.com/jonathan.gold.946), and [Gmail](mailto:jonnygold@gmail.com).
