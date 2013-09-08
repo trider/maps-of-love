@@ -30,6 +30,3 @@ licenses.
 You can contact me via the following links: [@jonnygold](https://twitter.com/jonnygold) on Twitter, 
 [Facebook] (http://www.facebook.com/jonathan.gold.946), and [Gmail](mailto:jonnygold@gmail.com). 
 I also created a Maps of Love Community on (Google+)[http://googleplus.mapsoflove.net"]
-            
-If you would like to sponsor my participation in the ride, you can send a donation via my Wheels of Love (profile page)
-[https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4]
