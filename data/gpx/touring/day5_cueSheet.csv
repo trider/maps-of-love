@@ -1,0 +1,8 @@
+Type,Notes,Distance (miles) From Start,Elevation (ft),Description
+Start,Start of route,0,0,""
+Straight,צא מהכיכר,0.02,566.60,
+Straight,פנה ימינה אל כביש 424,0.12,577.10,
+Straight,פנה ימינה אל כביש 3,0.88,655.18,
+Straight,פנה בפנייה ה-1 שמאלה אל כביש 44,4.88,408.79,
+Straight,פנה שמאלה אל כביש 38,11.26,810.04,
+End,End of route,11.33,820.54,""

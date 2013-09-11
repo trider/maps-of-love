@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="http://ridewithgps.com/">
+  <metadata>
+    <name>Wheels of Love Day3 On-road</name>
+    <link href="http://ridewithgps.com/trips/1406849">
+      <text>Wheels of Love Day3 On-road</text>
+    </link>
+    <time>2013-10-29T15:00:00Z</time>
+  </metadata>
+  <rte>
+    <name>Wheels of Love Day3 On-road</name>
+    <rtept lat="32.802260000000004" lon="35.526430000000005">
+      <name>Generic</name>
+      <cmt>Start of route</cmt>
+    </rtept>
+    <rtept lat="32.800887" lon="35.52696900000001">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל אחד העם</cmt>
+    </rtept>
+    <rtept lat="32.798692" lon="35.53032699999994">
+      <name>Straight</name>
+      <cmt>פנה ימינה אל ביאליק</cmt>
+    </rtept>
+    <rtept lat="32.797288" lon="35.53021100000001">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל אלונים</cmt>
+    </rtept>
+    <rtept lat="32.797237" lon="35.53178500000001">
+      <name>Straight</name>
+      <cmt>פנה קלות ימינה כדי להישאר באלונים</cmt>
+    </rtept>
+    <rtept lat="32.797247" lon="35.53235900000004">
+      <name>Straight</name>
+      <cmt>פנייה מתונה ימינה אל שדרות הרצל</cmt>
+    </rtept>
+    <rtept lat="32.796442" lon="35.53541999999993">
+      <name>Straight</name>
+      <cmt>בכיכר, צא ביציאה השניה אל טבור הארץ</cmt>
+    </rtept>
+    <rtept lat="32.794716" lon="35.535078999999996">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל גוש עציון</cmt>
+    </rtept>
+    <rtept lat="32.794245" lon="35.53758700000003">
+      <name>Straight</name>
+      <cmt>פנה ימינה אל המגינים</cmt>
+    </rtept>
+    <rtept lat="32.792016" lon="35.537264999999934">
+      <name>Straight</name>
+      <cmt>בכיכר, צא ביציאה השניה אל גולני</cmt>
+    </rtept>
+    <rtept lat="32.793235" lon="35.53986699999996">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל הפלמ"ח</cmt>
+    </rtept>
+    <rtept lat="32.80079" lon="35.53227800000002">
+      <name>Straight</name>
+      <cmt>בכיכר, צא ביציאה השניה אל כביש 90</cmt>
+    </rtept>
+    <rtept lat="32.876051" lon="35.54601500000001">
+      <name>Straight</name>
+      <cmt>פנה ימינה אל כביש 87</cmt>
+    </rtept>
+    <rtept lat="32.874189" lon="35.54543899999999">
+      <name>Straight</name>
+      <cmt>פנה בפנייה ה-1 שמאלה כדי להישאר בכביש 87</cmt>
+    </rtept>
+    <rtept lat="32.903308" lon="35.64730399999996">
+      <name>Straight</name>
+      <cmt>פנה ימינה אל כביש 92</cmt>
+    </rtept>
+    <rtept lat="32.701966" lon="35.602660000000014">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל כביש 98</cmt>
+    </rtept>
+    <rtept lat="32.686335" lon="35.659190999999964">
+      <name>Straight</name>
+      <cmt>פנה שמאלה כדי להישאר בכביש 98</cmt>
+    </rtept>
+    <rtept lat="32.686335" lon="35.659190999999964">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל כביש 7599</cmt>
+    </rtept>
+    <rtept lat="32.687427" lon="35.66405600000007">
+      <name>Straight</name>
+      <cmt>פנה קלות ימינה כדי להישאר בכביש 7599</cmt>
+    </rtept>
+    <rtept lat="32.689505" lon="35.669607999999926">
+      <name>Straight</name>
+      <cmt>פנה בפנייה ה-1 ימינה</cmt>
+    </rtept>
+    <rtept lat="32.685519" lon="35.66534300000001">
+      <name>Straight</name>
+      <cmt>פנה בפנייה ה-1 ימינה</cmt>
+    </rtept>
+    <rtept lat="32.686902" lon="35.66170999999997">
+      <name>Straight</name>
+      <cmt>פנה שמאלה אל כביש 7599</cmt>
+    </rtept>
+    <rtept lat="32.686335" lon="35.659190999999964">
+      <name>Straight</name>
+      <cmt>פנייה מתונה ימינה אל כביש 98</cmt>
+    </rtept>
+    <rtept lat="32.701966" lon="35.602660000000014">
+      <name>Straight</name>
+      <cmt>המשך ישר בכביש 92</cmt>
+    </rtept>
+    <rtept lat="32.704649" lon="35.586648999999966">
+      <name>Straight</name>
+      <cmt>בכיכר, צא ביציאה הראשונה אל כביש 90</cmt>
+    </rtept>
+    <rtept lat="32.783876" lon="35.54240400000003">
+      <name>Straight</name>
+      <cmt>המשך אל הבנים</cmt>
+    </rtept>
+    <rtept lat="32.788293" lon="35.540381000000025">
+      <name>Straight</name>
+      <cmt>המשך אל אלחדיף</cmt>
+    </rtept>
+    <rtept lat="32.794058" lon="35.531596000000036">
+      <name>Straight</name>
+      <cmt>המשך אל אוהל יעקב</cmt>
+    </rtept>
+    <rtept lat="32.797247" lon="35.53235900000004">
+      <name>Straight</name>
+      <cmt>בכיכר, צא ביציאה הראשונה אל אחד העם</cmt>
+    </rtept>
+    <rtept lat="32.800887" lon="35.52696900000001">
+      <name>Straight</name>
+      <cmt>פנה ימינה אל החניון</cmt>
+    </rtept>
+    <rtept lat="32.80221" lon="35.52647">
+      <name>Generic</name>
+      <cmt>End of route</cmt>
+    </rtept>
+  </rte>
+</gpx>

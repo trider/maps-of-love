@@ -1,0 +1,21 @@
+Type,Notes,Distance (miles) From Start,Elevation (ft),Description
+Start,Start of route,0,0,""
+Left,Turn left onto Route 90,0.08,466.54,
+Left,Turn left onto Route 91,4.76,910.43,
+Left,Turn left to stay on Route 91,12.23,939.63,
+Left,Turn left onto Route 978,19.04,2340.22,
+Left,Turn left,23.16,2716.54,
+Right,Turn right,23.17,2715.88,
+Right,Turn right toward Route 978,24.12,2702.43,
+Left,Turn left onto Route 978,24.13,2705.05,
+Left,Turn left onto Route 98,32.29,3232.61,
+Left,Turn left to stay on Route 98,33.23,3136.15,
+Straight,"At the roundabout, take the 2nd exit and stay on Route 98",35.65,3738.19,
+Straight,Make a U-turn,41.25,5490.49,
+Straight,Continue onto Route 98,41.29,5464.57,
+Right,Turn right onto Route 989,46.65,3712.60,
+Right,Turn right to stay on Route 989,47.23,3377.95,
+Right,Turn right onto Route 99,53.62,1444.23,
+Left,Turn left onto Tel Hai/‫תל חי‬‎/Route 90,62.88,508.20,
+Left,Turn left onto Route 9119,75.32,466.54,
+End,End of route,75.34,466.21,""
