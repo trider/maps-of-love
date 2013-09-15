@@ -1,3 +1,4 @@
+
 $(document).ready(function ()
 {
 
@@ -9,31 +10,51 @@ $(document).ready(function ()
     var timer;
     var count = 0;
     var map;
+    var rides;
 
     var locopts = { watch: false, locate: true, setView: true, maxZoom: 16, enableHighAccuracy: true };
-
+    
     $('#map, #ctrls, #btnStop, #btnHide, #txt').hide();
     $('#maps').show();
 
+
+    $("#offroad").click(function ()
+    {
+        $("#prependedRide").val("Offroad");
+    });
+    $("#onroad").click(function ()
+    {
+        $("#prependedRide").val("Onroad");
+    });
+    $("#challange").click(function ()
+    {
+        $("#prependedRide").val("Challange");
+    });
+    $("#touring").click(function ()
+    {
+        $("#prependedRide").val("Touring");
+    });
+
+
     $("#day1").click(function ()
     {
-        $("#prependedDay").val("Day 1");
+        $("#prependedDay").val("Day1");
     });
     $("#day2").click(function ()
     {
-        $("#prependedDay").val("Day 2");
+        $("#prependedDay").val("Day2");
     });
     $("#day3").click(function ()
     {
-        $("#prependedDay").val("Day 3");
+        $("#prependedDay").val("Day3");
     });
     $("#day4").click(function ()
     {
-        $("#prependedDay").val("Day 4");
+        $("#prependedDay").val("Day4");
     });
     $("#day5").click(function ()
     {
-        $("#prependedDay").val("Day 5");
+        $("#prependedDay").val("Day5");
     });
 
 
@@ -105,37 +126,29 @@ $(document).ready(function ()
 
 function getPath(map,elv)
 {
-    var val = $('#prependedDay') .val();
+    var val = $('#prependedRide') .val() + '_' + $('#prependedDay') .val();
     var txt;
-    if(val=='Day 1')
+    var rides;
+    $.get('ride_data.csv', function (csv)
     {
-       map = createMap('32.403224', '34.866703', 'data/gpx/Offroad1.gpx');
-       txt = 'data/pages/day1.html';
-    }
-    else if(val=='Day 2')
-    {
-       map = createMap('32.610546', '34.919347', 'data/gpx/Offroad2.gpx');
-       txt = 'data/pages/day2.html';
-    }
-    else if(val=='Day 3')
-    {
-        map = createMap('32.610738', '34.919718', 'data/gpx/Offroad3.gpx');
-        txt = 'data/pages/day3.html';     
-    } 
-    else if(val=='Day 4') 
-    {
-        map = createMap('32.55191657', '35.33612148', 'data/gpx/Offroad4.gpx');
-        txt = 'data/pages/day4.html';       
-    } 
-     else if(val=='Day 5') 
-    {
-        map = createMap('31.84376', '34.969161', 'data/gpx/Offroad5.gpx');
-        txt = 'data/pages/day5.html';
-    } 
+        rides = $.csv.toObjects(csv);
 
-    $.get(txt, function(data) { 
-            $("#txt").html(data);
-      });
+        for (var i = 0; i < rides.length; i++)
+        {
+            if (rides[i].name == val)
+            {
+                map = createMap(rides[i].lng, rides[i].lat, rides[i].gpx_file);
+                txt = rides[i].html_file;
+                $.get(txt, function (data)
+                {
+                    $("#txt").html(data);
+                });
+            }
+        }
+    });
+    
+
+    
       
     return map                         
    
@@ -255,7 +268,8 @@ function showElevation(map, path)
 
 function getTitle(e)
 {
-     $('.brand').text(e.target.get_name() + ' ('
+    alert(e.target.get_name());
+    $('.brand').text(e.target.get_name() + ' ('
             + Math.round(e.target.get_distance() / 1000) + 'km)');
 }
 
