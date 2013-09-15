@@ -127,30 +127,24 @@ $(document).ready(function ()
 function getPath(map,elv)
 {
     var val = $('#prependedRide') .val() + '_' + $('#prependedDay') .val();
-    var txt;
-    var rides;
     $.get('ride_data.csv', function (csv)
     {
-        rides = $.csv.toObjects(csv);
-
-        for (var i = 0; i < rides.length; i++)
-        {
-            if (rides[i].name == val)
+        var rides = $.csv.toObjects(csv);
+        $.each(rides, function (i, json){
+            if (json.name == val)
             {
-                map = createMap(rides[i].lng, rides[i].lat, rides[i].gpx_file);
-                txt = rides[i].html_file;
-                $.get(txt, function (data)
+                map = createMap(json.lng, json.lat, json.gpx_file);
+                $.get(json.html_file, function (data)
                 {
                     $("#txt").html(data);
                 });
-            }
-        }
-    });
-    
 
-    
+                return map;      
+            }
+        }); 
+     }); 
       
-    return map                         
+                      
    
 }
 
@@ -268,7 +262,6 @@ function showElevation(map, path)
 
 function getTitle(e)
 {
-    alert(e.target.get_name());
     $('.brand').text(e.target.get_name() + ' ('
             + Math.round(e.target.get_distance() / 1000) + 'km)');
 }
