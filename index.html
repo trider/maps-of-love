@@ -76,19 +76,34 @@
 	            </div>
                 <input class="span1 uneditable-input" id="prependedDay" type="text">
             </div>
-            <label class="checkbox">
-                <input type="checkbox" id="elv">Display elevation information
-            </label>
-            <button class="btn btn-success" id="btnChoose">Display</button>
-            <hr>
-            <img src="images/start.jpg" alt="Maps of Love">        
+            <div class="container">
+                <div class="row">
+                    <label class="checkbox">
+                        <input type="checkbox" id="elv">Display elevation information
+                    </label>
+                    <button class="btn btn-success" id="btnChoose">Display</button>
+                </div>   
+                <div class="row">
+                    <br><img src="images/start.jpg" class="img-polaroid" alt="Maps of Love">    
+                </div>
+                <div class="row">
+                    <br><button class="btn btn-info" id="btnAbout">About</button>               
+                </div>
+            </div>
+            
         </div>
       </div>    
     </div>
-        <div id="cnt">
-            <div id ="map" class="container"></div>
-            <div id="txt" class="container"></div>
-            <div class="counter" id="counter"><br></div>
+    <div id="cnt">
+        <div id ="map" class="container"></div>
+        <div id="txt" class="container"></div>
+        <div class="counter" id="counter"><br></div>
+    </div>
+    <div class="container" id="aboutPage">
+        <p>Created by Jonathan Gold for the Wheels of Love 2013 Charity Ride for the children of the Alyn hospital.</p>
+        <p> To sponsor my ride, click <a href="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4">here</a>.</p>
+        <p><img src="images/WOL_IMG_6292.jpg" alt="Maps of Love" class="img-poloroid"/></p>
+        <button class="btn btn-info" id="btnBack">Back</button>
     </div>
     </div>	
     <!--Scripts-->

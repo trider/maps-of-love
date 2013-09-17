@@ -1,13 +1,13 @@
 name,gpx_file,html_file,lng,lat
 Challange_Day1,data/gpx/challange/challange1.gpx,data/pages/challange/day1.html,32.403224,34.866703
 Challange_Day2,data/gpx/challange/challange2.gpx,data/pages/challange/day2.html,32.610546,34.919347
-Challange_Day3,data/gpx/challange/challange3.gpx,data/pages/challange/day3.html,32.610738,34.919718
-Challange_Day4,data/gpx/challange/challange4.gpx,data/pages/challange/day4.html,32.55191657,35.33612148
+Challange_Day3,data/gpx/challange/challange3.gpx,data/pages/challange/day3.html,33.05336637743882,35.624856029881904
+Challange_Day4,data/gpx/challange/challange4.gpx,data/pages/challange/day4.html,33.05336637743882,35.624856029881904
 Challange_Day5,data/gpx/challange/challange5.gpx,data/pages/challange/day5.html,31.84376,34.969161
 Touring_Day1,data/gpx/touring/touring1.gpx,data/pages/touring/day1.html,32.403224,34.866703
-Touring_Day2,data/gpx/touring/touring2.gpx,data/pages/touring/day2.html,32.610546,34.919347
+Touring_Day2,data/gpx/touring/touring2.gpx,data/pages/touring/day2.html,32.650738377196504,35.094765697852836
 Touring_Day3,data/gpx/touring/touring3.gpx,data/pages/touring/day3.html,32.610738,34.919718
-Touring_Day4,data/gpx/touring/touring4.gpx,data/pages/touring/day4.html,32.55191657,35.33612148
+Touring_Day4,data/gpx/touring/touring4.gpx,data/pages/touring/day4.html,32.788229350745986,35.51705268515716
 Touring_Day5,data/gpx/touring/touring5.gpx,data/pages/touring/day5.html,31.84376,34.969161
 Offroad_Day1,data/gpx/offroad/Offroad1.gpx,data/pages/offroad/day1.html,32.403224,34.866703
 Offroad_Day2,data/gpx/offroad/Offroad2.gpx,data/pages/offroad/day2.html,32.610546,34.919347
@@ -16,6 +16,6 @@ Offroad_Day4,data/gpx/offroad/Offroad4.gpx,data/pages/offroad/day4.html,32.55191
 Offroad_Day5,data/gpx/offroad/Offroad5.gpx,data/pages/offroad/day5.html,31.84376,34.969161
 Onroad_Day1,data/gpx/onroad/Onroad1.gpx,data/pages/onroad/day1.html,32.403224,34.866703
 Onroad_Day2,data/gpx/onroad/Onroad2.gpx,data/pages/onroad/day2.html,32.610546,34.919347
-Onroad_Day3,data/gpx/onroad/Onroad3.gpx,data/pages/onroad/day3.html,32.610738,34.919718
+Onroad_Day3,data/gpx/onroad/Onroad3.gpx,data/pages/onroad/day3.html,32.755897607262,35.517739330663
 Onroad_Day4,data/gpx/onroad/Onroad4.gpx,data/pages/onroad/day4.html,32.55191657,35.33612148
 Onroad_Day5,data/gpx/onroad/Onroad5.gpx,data/pages/onroad/day5.html,31.84376,34.969161
