@@ -12,9 +12,9 @@ $(document).ready(function ()
     var map;
     var rides;
 
-    var locopts = { watch: false, locate: true, setView: true, maxZoom: 16, enableHighAccuracy: true };
+    var locopts = { watch: false, locate: true, setView: true, enableHighAccuracy: true };
     
-    $('#map, #ctrls, #btnStop, #btnHide, #txt').hide();
+    $('#map, #ctrls, #btnStop, #btnHide, #txt, #aboutPage').hide();
     $('#maps').show();
 
 
@@ -62,8 +62,29 @@ $(document).ready(function ()
     {
         $('#maps').hide();
         $('#map, #ctrls').show();
-        var elv = $('#elv').val();
-        map = getPath(map, elv);
+        var val = $('#prependedRide') .val() + '_' + $('#prependedDay') .val();
+        $.get('ride_data.csv', function (csv)
+        {
+            var rides = $.csv.toObjects(csv);
+            $.each(rides, function (i, json){
+                if (json.name === val)
+                {
+                    map = createMap(map, json);        
+                }
+            }); 
+         }); 
+    });
+
+    $("#btnAbout").click(function ()
+    {
+        $('#maps').hide();
+        $('#aboutPage').show();
+    });
+
+    $("#btnBack").click(function ()
+    {
+        $('#maps').show();
+        $('#aboutPage').hide();
     });
 
 
@@ -88,28 +109,24 @@ $(document).ready(function ()
     $("#btnStart").click(function ()
     {
 
-        $(this).hide();
+        $('#btnStart').hide();
         $('#btnStop').show();
-        var zm = map.getZoom();
+        map.getZoom();
         timer = $.timer(function ()
         {
             count++;
 
-            $('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
-
+            //$('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
             map.on("locationfound", function (location)
             {
-                if (!marker)
-                    marker = L.userMarker(location.latlng, { pulsing: true, accuracy: 500,
-                        smallIcon: true
-                    }).addTo(map);
+               if (!marker)
+                    marker = L.userMarker(location.latlng, { pulsing: true, accuracy: 500, smallIcon: true
+                }).addTo(map);
                 marker.setLatLng(location.latlng);
                 marker.setAccuracy(location.accuracy);
                 marker.addTo(map);
             });
             map.locate(locopts);
-
-
         });
         timer.set({ time: 1000, autostart: true });
     });
@@ -124,36 +141,12 @@ $(document).ready(function ()
 
 });
 
-function getPath(map,elv)
-{
-    var val = $('#prependedRide') .val() + '_' + $('#prependedDay') .val();
-    $.get('ride_data.csv', function (csv)
-    {
-        var rides = $.csv.toObjects(csv);
-        $.each(rides, function (i, json){
-            if (json.name == val)
-            {
-                map = createMap(json.lng, json.lat, json.gpx_file);
-                $.get(json.html_file, function (data)
-                {
-                    $("#txt").html(data);
-                });
-
-                return map;      
-            }
-        }); 
-     }); 
-      
-                      
-   
-}
-
-function createMap(lat,lng, path)
+function createMap(map, json)
 {
     
     var map = new L.map('map', 
     {
-        center: [lat, lng],
+        center: [json.lng, json.lat],
         zoom: 10
     });
 
@@ -166,12 +159,13 @@ function createMap(lat,lng, path)
     
     addLocateControl(map);
     if ($('#elv').is(':checked')) {
-       showElevation(map, path);
+       showElevation(map, json.gpx_file);
     }
     else
     {
-        addPath(map, path);
+        addPath(map, json.gpx_file);
     } 
+    $.get(json.html_file, function (data){$("#txt").html(data)});
     return map;
 }
 
