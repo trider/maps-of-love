@@ -19,3 +19,6 @@ Onroad_Day2,data/gpx/onroad/Onroad2.gpx,data/pages/onroad/day2.html,32.610546,34
 Onroad_Day3,data/gpx/onroad/Onroad3.gpx,data/pages/onroad/day3.html,32.755897607262,35.517739330663
 Onroad_Day4,data/gpx/onroad/Onroad4.gpx,data/pages/onroad/day4.html,32.55191657,35.33612148
 Onroad_Day5,data/gpx/onroad/Onroad5.gpx,data/pages/onroad/day5.html,31.84376,34.969161
+Test_Day1,data/test/efrat.gpx,data/pages/onroad/day1.html,31.671778,35.163284
+Test_Day2,data/test/gilo2cisco.gpx,data/pages/onroad/day2.html,31.73231099369786,35.20014481399537
+Test_Day3,data/test/work2home.gpx,data/pages/onroad/day3.html,31.802651642607916,35.20885896917813

@@ -51,10 +51,11 @@
 	                <span class="caret"></span>
 	              </a>
 	              <ul class="dropdown-menu">
-	                <li><a href="#" id="offroad">Offroad</a></li>
-                    <li><a href="#" id="onroad">Onroad</a></li>
-                    <li><a href="#" id="challange">Challange </a></li>
-                    <li><a href="#" id="touring">Touring</a></li>
+	                <li><a href="#" id="Offroad" class="ride">Offroad</a></li>
+                    <li><a href="#" id="Onroad" class="ride">Onroad</a></li>
+                    <li><a href="#" id="Challange" class="ride">Challange </a></li>
+                    <li><a href="#" id="Touring" class="ride">Touring</a></li>
+                    <!--<li><a href="#" id="Test" class="ride">Test</a></li>-->
 	              </ul>
 	            </div>
                 <input class="span1 uneditable-input" id="prependedRide" type="text" >
@@ -67,11 +68,11 @@
 	               <span class="caret"></span>
 	              </a>
 	              <ul class="dropdown-menu">
-	                <li><a href="#" id="day1">Day1</a></li>
-                    <li><a href="#" id="day2">Day2</a></li>
-                    <li><a href="#" id="day3">Day3</a></li>
-                    <li><a href="#" id="day4">Day4</a></li>
-                    <li><a href="#" id="day5">Day5</a></li>
+	                <li><a href="#" id="Day1" class="day">Day1</a></li>
+                    <li><a href="#" id="Day2" class="day">Day2</a></li>
+                    <li><a href="#" id="Day3" class="day">Day3</a></li>
+                    <li><a href="#" id="Day4" class="day">Day4</a></li>
+                    <li><a href="#" id="Day5" class="day">Day5</a></li>
 	              </ul> 
 	            </div>
                 <input class="span1 uneditable-input" id="prependedDay" type="text">
@@ -87,7 +88,9 @@
                     <br><img src="images/start.jpg" class="img-polaroid" alt="Maps of Love">    
                 </div>
                 <div class="row">
-                    <br><button class="btn btn-info" id="btnAbout">About</button>               
+                    <br>
+                    <button class="btn btn-info" id="btnAbout">About</button>
+                    <button class="btn btn-danger" id="btnDonate">Donate</button>               
                 </div>
             </div>
             
@@ -100,8 +103,7 @@
         <div class="counter" id="counter"><br></div>
     </div>
     <div class="container" id="aboutPage">
-        <p>Created by Jonathan Gold for the Wheels of Love 2013 Charity Ride for the children of the Alyn hospital.</p>
-        <p> To sponsor my ride, click <a href="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4">here</a>.</p>
+        <div class="container" id="aboutTxt"></div>
         <p><img src="images/WOL_IMG_6292.jpg" alt="Maps of Love" class="img-poloroid"/></p>
         <button class="btn btn-info" id="btnBack">Back</button>
     </div>
