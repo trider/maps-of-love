@@ -59,8 +59,8 @@ $(document).ready(function ()
 
     $("#btnBack").click(function ()
     {
+        $('#aboutPage, #aboutTxt, #donateTxt').hide();
         $('#maps').show();
-        $('#aboutPage').hide();
     });
 
 
