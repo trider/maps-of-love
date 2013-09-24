@@ -1,5 +1,3 @@
-
-
 $(document).ready(function ()
 {
 
@@ -48,15 +46,15 @@ $(document).ready(function ()
     $("#btnAbout").click(function ()
     {
         $('#maps').hide();
-        $('#aboutPage').show();
-        $('#aboutTxt').html('<p>Created by Jonathan Gold for the Wheels of Love 2013 Charity Ride for the children of the Alyn hospital.</p>');
+        $('#aboutPage, #aboutTxt').show();
+        $('#donateTxt').hide();
     });
 
     $("#btnDonate").click(function ()
     {
         $('#maps').hide();
-        $('#aboutPage').show();
-        $('#aboutTxt').html('<p>To sponsor my ride, click <a href="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4">here</a>.</p>');
+        $('#aboutPage, #donateTxt').show();
+        $('#aboutTxt').hide();  
     });
 
     $("#btnBack").click(function ()
