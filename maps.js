@@ -9,7 +9,7 @@ $(document).ready(function ()
     var timer;
     var map;
     var rides;
-    var interval = 60;
+    var interval = 30;
     var count = 0;
 
     $('#map, #ctrls, #btnStop, #btnHide, #txt, #aboutPage').hide();
@@ -86,7 +86,7 @@ $(document).ready(function ()
     {
 
         $('#btnStart').hide();
-        $('#btnStop').show();
+        //$('#btnStop').show();
 
         timer = $.timer(function ()
         {
