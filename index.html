@@ -19,25 +19,7 @@
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container" >
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
                     <a class="brand" href="#" style="font-size:105%">Maps of Love</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                          <li>
-                             <div id="ctrls" class="controls-row">
-                                <button class="btn-mini btn-success" id="btnStart">Start tracking</button>
-                                <button class="btn-mini btn-danger" id="btnStop">Stop tracking</button>
-                                <button class="btn-mini btn-info" id="btnShow">Show desciption</button> 
-                                <button class="btn-mini btn-info" id="btnHide">Hide description</button>
-                                <button class="btn-mini btn-inverse" id="btnChange">Home</button>
-                            </div>
-                          </li>          
-                        </ul>
-                    </div>
                  </div>
             </div>
         </div>
@@ -98,12 +80,20 @@
       </div>    
     </div>
         <div id="cnt">
-            <div id ="map" class="container"></div>
+        <div id="ctrls" class="controls-row">
+            <button class="btn-mini btn-success" id="btnStart">Start tracking</button>
+            <button class="btn-mini btn-danger" id="btnStop">Stop tracking</button>
+            <button class="btn-mini btn-info" id="btnShow">Show desciption</button> 
+            <button class="btn-mini btn-inverse" id="btnChange">Home</button>
+        </div>
+        <button class="btn-mini btn-info" id="btnHide">Hide description</button>
+        <br>
+        <div id ="map" class="container"></div>
             <div id="txt" class="container"></div>
             <div class="counter" id="counter"><br></div>
             <div class="container" id="aboutPage">
             <div class="container" id="aboutTxt">
-                <h4>Version 1.0</h4>
+                <h4>Version 1.1</h4>
                 Created by Jonathan Gold for the <a href="https://www.alynride.org/">Wheels of Love 2013 Charity Ride</a>.
                 <p><img src="images/WOL_IMG_6292.jpg" alt="Maps of Love" class="img-poloroid"/></p>
                 <p>For more information, regarding the Maps of Love project, the 
@@ -112,8 +102,8 @@
                     <a href="https://github.com/trider/maps-of-love">GitHub code repository</a>.</p>     
             </div>
             <div class="container" id="donateTxt">
-                To open in a browser, click <a href="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4">here</a>
-                <iframe src="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4" height="400"></iframe>
+                <iframe src="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4" height="325px"></iframe>
+                 <p>To open in a browser, click <a href="https://www.alynride.org/portal/riderDetails.aspx?lang=en&id=4dd738f7-7eed-e211-b7e1-000c29c4aef4">here</a></p>
         </div>
             <div class="container">
                 <button class="btn btn-info" id="btnBack">Back</button>     

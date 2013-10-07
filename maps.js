@@ -9,11 +9,13 @@ $(document).ready(function ()
     var timer;
     var map;
     var rides;
-    var interval = 30;
+    var interval = 20;
     var count = 0;
 
-    $('#map, #ctrls, #btnStop, #btnHide, #txt, #aboutPage').hide();
+   
+    $('#map, #ctrls, #btnStart, #btnStop, #btnShow, #btnHide, #txt, #aboutPage').hide();
     $('#maps').show();
+
 
     $(".ride").click(function ()
     {
@@ -28,7 +30,7 @@ $(document).ready(function ()
     $("#btnChoose").click(function ()
     {
         $('#maps').hide();
-        $('#map, #ctrls').show();
+        $('#map, #ctrls, #btnStart, #btnShow').show();
         var val = $('#prependedRide').val() + '_' + $('#prependedDay').val();
         $.get('ride_data.csv', function (csv)
         {
@@ -73,20 +75,20 @@ $(document).ready(function ()
     $("#btnShow").click(function ()
     {
         $("#txt, #btnHide").show();
-        $("#map, #btnShow").hide();
+        $("#map, #btnShow, .controls-row").hide();
 
     });
     $("#btnHide").click(function ()
     {
         $("#txt, #btnHide").hide();
-        $("#map, #btnShow").show();
+        $("#map, #btnShow, .controls-row").show();
     });
 
     $("#btnStart").click(function ()
     {
 
         $('#btnStart').hide();
-        //$('#btnStop').show();
+        $('#btnStop').show();
 
         timer = $.timer(function ()
         {
@@ -230,16 +232,16 @@ function setMapSize(){
 	var res =  screen.availHeight;
 	      
 	if(res <= 320){
-      $("#map").height('200px');
+      $("#map").height('175');
 	}
 	else if(res > 320 && res < 400){
-      $("#map").height('250px');
+      $("#map").height('225');
     } 
  	else if(res >= 400 && res < 480 ){
-      $("#map").height('275px');
+      $("#map").height('250px');
     }
  	else if(res >= 480 && res < 540 ){
-      $("#map").height('350px');
+      $("#map").height('325');
  	}
  	else if(res > 540 ){
  	  $("#map").height('400px');
