@@ -4,15 +4,19 @@ $(document).ready(function ()
     L_PREFER_CANVAS = true;
     L_DISABLE_3D = true;
 
+    Parse.initialize("cumLBO8rBloI9peNr7TuU2q6TOJdqL7mMz5faNFi", "YSfUfo6hXUwYPbPelzhO1v78i7C4pBv1RTFVSWJW");
+    var Note = Parse.Object.extend("NoteObject");
+
     setMapSize();
     var marker;
     var timer;
     var map;
     var rides;
-    var interval = 20;
+    var interval = 60;
     var count = 0;
+    var val;
 
-   
+
     $('#map, #ctrls, #btnStart, #btnStop, #btnShow, #btnHide, #txt, #aboutPage').hide();
     $('#maps').show();
 
@@ -31,7 +35,7 @@ $(document).ready(function ()
     {
         $('#maps').hide();
         $('#map, #ctrls, #btnStart, #btnShow').show();
-        var val = $('#prependedRide').val() + '_' + $('#prependedDay').val();
+        val = $('#prependedRide').val() + '_' + $('#prependedDay').val();
         $.get('ride_data.csv', function (csv)
         {
             var rides = $.csv.toObjects(csv);
@@ -56,7 +60,7 @@ $(document).ready(function ()
     {
         $('#maps').hide();
         $('#aboutPage, #donateTxt').show();
-        $('#aboutTxt').hide();  
+        $('#aboutTxt').hide();
     });
 
     $("#btnBack").click(function ()
@@ -84,16 +88,19 @@ $(document).ready(function ()
         $("#map, #btnShow, .controls-row").show();
     });
 
+
+
     $("#btnStart").click(function ()
     {
 
         $('#btnStart').hide();
         $('#btnStop').show();
+        var prevLatLng;
 
         timer = $.timer(function ()
         {
             count++;
-            $('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
+            //$('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
             if (count % interval == 0 || count == 1)
             {
                 console.log(count);
@@ -105,9 +112,20 @@ $(document).ready(function ()
                     marker.setLatLng(location.latlng);
                     marker.setAccuracy(location.accuracy);
                     marker.addTo(map);
+
+                    if(location.latlng != prevLatLng)
+                    {
+                        SavePosition(val, count, 'tracker', location.latlng, Note);
+                    }
+                    prevLatLng = location.latlng;    
+                    
+
                 });
+
                 var zm = map.getZoom();
                 map.locate({ watch: false, locate: true, setView: true, enableHighAccuracy: true, maxZoom: zm });
+
+
             }
 
         });
@@ -123,6 +141,31 @@ $(document).ready(function ()
     });
 
 });
+
+function SavePosition(val, count, txt, latlng, Note)
+{
+    
+    var note = new Note();
+    var point = new Parse.GeoPoint({latitude: latlng.lat, longitude: latlng.lng});
+	note.save({
+            count: count,
+            title:val, 
+            body:txt,
+            location:point }, 
+        {
+		success:function(note) {
+            $('#counter').html('Saved the object at: ' + count + ' seconds');
+			console.log("Saved the object!");
+		}, 
+		error:function(note,error) {
+			console.dir(error);
+			alert("Sorry, I couldn't save it.");
+		}
+	});        
+  
+}
+
+
 
 function createMap(map, json)
 {
@@ -226,19 +269,19 @@ function setMapSize(){
 	var res =  screen.availHeight;
 	      
 	if(res <= 320){
-      $("#map").height('175');
+      $("#map").height('150');
 	}
 	else if(res > 320 && res < 400){
-      $("#map").height('225');
+      $("#map").height('175');
     } 
  	else if(res >= 400 && res < 480 ){
-      $("#map").height('250px');
+      $("#map").height('200');
     }
  	else if(res >= 480 && res < 540 ){
-      $("#map").height('325');
+      $("#map").height('300');
  	}
  	else if(res > 540 ){
- 	  $("#map").height('400px');
+ 	  $("#map").height('400');
  	}
      
 }
