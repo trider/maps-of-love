@@ -1,10 +1,11 @@
+Parse.initialize("cumLBO8rBloI9peNr7TuU2q6TOJdqL7mMz5faNFi", "YSfUfo6hXUwYPbPelzhO1v78i7C4pBv1RTFVSWJW");
+
 $(document).ready(function ()
 {
 
     L_PREFER_CANVAS = true;
     L_DISABLE_3D = true;
 
-    Parse.initialize("cumLBO8rBloI9peNr7TuU2q6TOJdqL7mMz5faNFi", "YSfUfo6hXUwYPbPelzhO1v78i7C4pBv1RTFVSWJW");
     var Note = Parse.Object.extend("NoteObject");
 
     setMapSize();
@@ -12,12 +13,12 @@ $(document).ready(function ()
     var timer;
     var map;
     var rides;
-    var interval = 60;
+    var interval = $('interval').val();
     var count = 0;
     var val;
 
 
-    $('#map, #ctrls, #btnStart, #btnStop, #btnShow, #btnHide, #txt, #aboutPage').hide();
+    $('#map, #ctrls, #btnStart, #btnStop, #btnShow, #btnHide, #txt, #aboutPage, #settings').hide();
     $('#maps').show();
 
 
@@ -87,7 +88,17 @@ $(document).ready(function ()
         $("#txt, #btnHide").hide();
         $("#map, #btnShow, .controls-row").show();
     });
-
+    $("#btnSettings").click(function ()
+    {
+        $("#settings, #btnClose").show();
+        $("#map, #btnShow, .controls-row, #counter, #counter2").hide();
+    });
+    $("#btnClose").click(function ()
+    {
+        $("#settings, #btnClose").hide();
+        interval = $('interval').val();
+        $("#map, #btnShow, .controls-row, #counter, #counter2").show();
+    });
 
 
     $("#btnStart").click(function ()
@@ -100,7 +111,7 @@ $(document).ready(function ()
         timer = $.timer(function ()
         {
             count++;
-            //$('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
+            $('#counter').html('<b>Elapsed time:</b> ' + count + ' seconds');
             if (count % interval == 0 || count == 1)
             {
                 console.log(count);
@@ -113,12 +124,11 @@ $(document).ready(function ()
                     marker.setAccuracy(location.accuracy);
                     marker.addTo(map);
 
-                    if(location.latlng != prevLatLng)
+                    if (location.latlng != prevLatLng)
                     {
                         SavePosition(val, count, 'tracker', location.latlng, Note);
+                        prevLatLng = location.latlng;
                     }
-                    prevLatLng = location.latlng;    
-                    
 
                 });
 
@@ -134,7 +144,7 @@ $(document).ready(function ()
 
     $("#btnStop").click(function ()
     {
-        $('#counter').html('<br>');
+        $('#counter, #counter2').html('<br>');
         $('#btnStop').hide();
         $('#btnStart').show();
         timer.stop();
@@ -154,11 +164,11 @@ function SavePosition(val, count, txt, latlng, Note)
             location:point }, 
         {
 		success:function(note) {
-            $('#counter').html('Saved the object at: ' + count + ' seconds');
+            $('#counter2').html('Saved the object at: ' + count + ' seconds');
 			console.log("Saved the object!");
 		}, 
 		error:function(note,error) {
-			console.dir(error);
+			$('#counter2').html('Sorry, I could not save it');
 			alert("Sorry, I couldn't save it.");
 		}
 	});        
